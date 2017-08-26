@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查浏览器是否能够播放指定的视频、声频</title>
+</head>
+<body>
+<p>浏览器支持MP4视频吗？
+    <span>
+        <button type="button" onclick="supportType(event,'vedio/mp4')">点击测试</button>
+    </span>
+</p>
+
+<p>浏览器支持ogg视频吗？
+    <span>
+        <button type="button" onclick="supportType(event,'vedio/ogg')">点击测试</button>
+    </span>
+</p>
+
+<script type="text/javascript">
+    function supportType(e,vidType) {
+        var x = document.createElement('VIDEO');
+        isSup = x.canPlayType(vidType);
+        if(isSup = ' '){
+            isSup = 'NO'
+        }
+        e.target.parentNode.innerHTML = '答案：' + isSup;
+    }
+</script>
+</body>
+</html>
