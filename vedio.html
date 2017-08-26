@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vedio</title>
+</head>
+<body>
+<video src="sample.mp4" id="video" width="480px" height="280px" controls></video>
+<div>
+    <button type="button" onclick="playV()">播放</button>
+    <button onclick="pauseV()" type="button">暂停</button>
+</div>
+
+<script type="text/javascript">
+    var x = document.getElementById('video');
+    function playV() {
+        x.play();
+    }
+    function pauseV() {
+        x.pause();
+    }
+</script>
+</body>
+</html>
