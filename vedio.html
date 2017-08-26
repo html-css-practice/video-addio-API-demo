@@ -9,6 +9,8 @@
 <div>
     <button type="button" onclick="playV()">播放</button>
     <button onclick="pauseV()" type="button">暂停</button>
+    <button onclick="volume()" type="button">读取或修改媒体的播放音量</button>
+    <button onclick="muted()" type="button">读取或修改媒体当前的静音状态</button>
 </div>
 
 <script type="text/javascript">
@@ -18,6 +20,14 @@
     }
     function pauseV() {
         x.pause();
+    }
+    function volume(){
+        // 读取或修改媒体的播放音量
+        x.volume = 0.1;
+    }
+    function muted() {
+        //读取或修改媒体当前的静音状态
+        x.muted = true;
     }
 </script>
 </body>
